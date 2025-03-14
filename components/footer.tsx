@@ -81,7 +81,7 @@ export default function Footer() {
               >
                 <a href="mailto:cabinet@cabinet-michou.com" className="flex items-center space-x-2">
                   <Mail className="w-5 h-5" />
-                  <span>cabinet@cabinet-michou.com</span>
+                  <span>cabinet@cabinet-mas-rocher.com</span>
                 </a>
               </Button>
 
@@ -103,11 +103,11 @@ export default function Footer() {
               <div className="space-y-2 text-muted-foreground">
                 <p className="flex items-center space-x-2">
                   <Building2 className="w-4 h-4" />
-                  <span>Cabinet R. Michou & Cie</span>
+                  <span>Cabinet Mas Rocher</span>
                 </p>
-                <p>SAS au capital de 120 000,00 €</p>
-                <p>RCS Paris : B562016535</p>
-                <p>SIRET : 562 016 535 000 22</p>
+                <p>SAS au capital de 75 000,00 €</p>
+                <p>RCS Paris : 349 504 548</p>
+                <p>SIRET : 34950454800042</p>
               </div>
               
               <div className="space-y-2 text-muted-foreground">
@@ -142,7 +142,7 @@ export default function Footer() {
         <Separator className="my-8" />
 
         <div className="text-center text-sm text-muted-foreground">
-          {new Date().getFullYear()} Cabinet R. Michou & Cie. Tous droits réservés.
+          {new Date().getFullYear()} Cabinet Mas Rocher. Tous droits réservés.
         </div>
       </div>
     </footer>
