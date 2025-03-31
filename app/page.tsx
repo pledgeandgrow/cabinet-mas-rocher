@@ -12,7 +12,7 @@ export default function Home() {
     <main className=" px-0 py-0" >
       <HeroCustom />
       <div className="flex flex-col items-center mt-16">
-        <Badge className="m-auto mb-4 text-center">Immobilier</Badge>
+        <Badge className="m-auto mb-4 text-center bg-[#8e2024] hover:bg-[#8e2024]/90 text-white">Immobilier</Badge>
         <h1 className="text-center text-5xl font-bold lg:text-6xl py-2 ">Nos annonces</h1>
       </div>
       <div className="container mx-auto">

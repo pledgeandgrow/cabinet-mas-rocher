@@ -24,37 +24,44 @@ function Feature() {
     }
   ];  
   return (
-    <div className="w-full py-20 lg:py-40">
-      <div className="container mx-auto">
-        <div className="grid rounded-lg container p-8 grid-cols-1 gap-8 items-center lg:grid-cols-2">
-          <div className="flex gap-10 flex-col">
+    <div className="w-full py-20 lg:py-40 overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="grid rounded-lg p-4 md:p-8 grid-cols-1 gap-8 items-center lg:grid-cols-2">
+          <div className="flex gap-6 md:gap-10 flex-col">
             <div className="flex gap-4 flex-col">
               <div>
-                <Badge variant="default">Propriétaire</Badge>
+                <Badge variant="default" className="bg-[#8e2024] hover:bg-[#8e2024]/90 text-white">Propriétaire</Badge>
               </div>
               <div className="flex gap-2 flex-col">
-                <h2 className="text-5xl font-bold lg:text-5xl tracking-tighter max-w-xl text-left font-regular">
+                <h2 className="text-3xl md:text-5xl font-bold lg:text-5xl tracking-tighter max-w-xl text-left font-regular">
                 Nos principaux services
                 </h2>
               </div>
             </div>
-            <div className="grid lg:pl-6 grid-cols-1 sm:grid-cols-3 items-start lg:grid-cols-1 gap-6">
-            <Carousel className="w-full">
-            <CarouselContent>
+            <div className="grid grid-cols-1 items-start gap-4 md:gap-6">
+            <Carousel 
+              className="w-full relative" 
+              opts={{
+                align: "center",
+                loop: true,
+                slidesToScroll: 1
+              }}
+            >
+            <CarouselContent className="px-10">
               {sections.map((section, index) => (
-                <CarouselItem key={index}>
-                  <div key={index} className="flex gap-4 flex-col">
+                <CarouselItem key={index} className="md:basis-full">
+                  <div key={index} className="flex gap-4 flex-col px-8 py-2 min-h-[200px]">
                     <div className="flex gap-2 items-center">
-                      <Check size={24} className="text-accent" />
-                      <h3 className="text-lg font-semibold">{section.title}</h3>
+                      <Check size={24} className="text-[#8e2024]" />
+                      <h3 className="text-sm md:text-lg font-semibold">{section.title}</h3>
                     </div>
-                    <p className="text-sm text-muted-foreground">{section.description}</p>
+                    <p className="text-xs md:text-sm text-muted-foreground">{section.description}</p>
                   </div>
                 </CarouselItem>
               ))}
               </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="absolute left-0 -translate-x-1/2 bg-[#8e2024] hover:bg-[#8e2024]/80 text-white" />
+            <CarouselNext className="absolute right-0 translate-x-1/2 bg-[#8e2024] hover:bg-[#8e2024]/80 text-white" />
           </Carousel>
               </div>
           </div>

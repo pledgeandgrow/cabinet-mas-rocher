@@ -39,12 +39,6 @@ const mainMenuItems = [
         url: "/gestion-locative",
       },
       {
-        title: "Nos dernières annonces",
-        description: "Achat, vente ou location de biens immobiliers",
-        icon: Banknote,
-        url: "/#annonces",
-      },
-      {
         title: "Syndic",
         description: "Gestion transparente et efficace de votre copropriété",
         icon: Banknote,
@@ -83,8 +77,8 @@ const mainMenuItems = [
     ],
   },
   {
-    title: "Le Cabinet",
-    url: "/cabinet",
+    title: "Cabinet Michou",
+    url: "https://cabinet-michou.vercel.app",
     icon: Building2,
     description: "Découvrez notre histoire depuis 1952",
   },
@@ -207,7 +201,7 @@ export function MainNav() {
                 <Link key={link.title} href={link.url}>
                   <Button
                     variant={link.title === "Extranet Client" ? "default" : "ghost"}
-                    className="flex items-center gap-2"
+                    className={`flex items-center gap-2 ${link.title === "Extranet Client" ? "bg-[#b69260] hover:bg-[#b69260]/90 text-white" : ""}`}
                   >
                     <link.icon className="h-4 w-4" />
                     {link.title}
@@ -299,4 +293,3 @@ export function MainNav() {
     </header>
   )
 }
-

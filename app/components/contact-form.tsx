@@ -64,21 +64,21 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="w-full mx-auto">
-      <div className="text-center mb-8">
+    <section className="w-full md:w-3/5 mx-auto">
+      <div className="text-center md:text-left mb-6 md:mb-8">
         <Badge
           variant={"outline"}
         >Contact</Badge>
-        <h2 className="text-3xl font-extrabold text-black dark:text-white leading-tight">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-black dark:text-white leading-tight mt-2">
           Envoyez-nous un message
         </h2>
-        <p className="mt-4 text-gray-600">
+        <p className="mt-3 text-sm md:text-base text-gray-600">
           Nous vous répondrons dans les plus brefs délais
         </p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 md:space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <div className="space-y-2">
             <label htmlFor="nom" className="text-sm font-medium text-gray-700">
               Nom
@@ -86,10 +86,10 @@ export default function ContactForm() {
             <Input
               id="nom"
               {...register("nom", { required: "Le nom est requis" })}
-              className={errors.nom ? "border-red-500" : ""}
+              className={errors.nom ? "border-[#8e2024]" : ""}
             />
             {errors.nom && (
-              <p className="text-red-500 text-sm">{errors.nom.message}</p>
+              <p className="text-[#8e2024] text-sm">{errors.nom.message}</p>
             )}
           </div>
 
@@ -100,15 +100,15 @@ export default function ContactForm() {
             <Input
               id="prenom"
               {...register("prenom", { required: "Le prénom est requis" })}
-              className={errors.prenom ? "border-red-500" : ""}
+              className={errors.prenom ? "border-[#8e2024]" : ""}
             />
             {errors.prenom && (
-              <p className="text-red-500 text-sm">{errors.prenom.message}</p>
+              <p className="text-[#8e2024] text-sm">{errors.prenom.message}</p>
             )}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <div className="space-y-2">
             <label htmlFor="email" className="text-sm font-medium text-gray-500">
               Email
@@ -123,10 +123,10 @@ export default function ContactForm() {
                   message: "Email invalide",
                 },
               })}
-              className={errors.email ? "border-red-500" : ""}
+              className={errors.email ? "border-[#8e2024]" : ""}
             />
             {errors.email && (
-              <p className="text-red-500 text-sm">{errors.email.message}</p>
+              <p className="text-[#8e2024] text-sm">{errors.email.message}</p>
             )}
           </div>
 
@@ -137,10 +137,10 @@ export default function ContactForm() {
             <Input
               id="telephone"
               {...register("telephone", { required: "Le téléphone est requis" })}
-              className={errors.telephone ? "border-red-500" : ""}
+              className={errors.telephone ? "border-[#8e2024]" : ""}
             />
             {errors.telephone && (
-              <p className="text-red-500 text-sm">{errors.telephone.message}</p>
+              <p className="text-[#8e2024] text-sm">{errors.telephone.message}</p>
             )}
           </div>
         </div>
@@ -152,10 +152,10 @@ export default function ContactForm() {
           <Input
             id="objet"
             {...register("objet", { required: "L'objet est requis" })}
-            className={errors.objet ? "border-red-500" : ""}
+            className={errors.objet ? "border-[#8e2024]" : ""}
           />
           {errors.objet && (
-            <p className="text-red-500 text-sm">{errors.objet.message}</p>
+            <p className="text-[#8e2024] text-sm">{errors.objet.message}</p>
           )}
         </div>
 
@@ -167,25 +167,26 @@ export default function ContactForm() {
             id="message"
             rows={5}
             {...register("message", { required: "Le message est requis" })}
-            className={errors.message ? "border-red-500" : ""}
+            className={errors.message ? "border-[#8e2024]" : ""}
           />
           {errors.message && (
-            <p className="text-red-500 text-sm">{errors.message.message}</p>
+            <p className="text-[#8e2024] text-sm">{errors.message.message}</p>
           )}
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-4">
           <ReCAPTCHA
             sitekey="6Ldk9NEqAAAAAMyq1LfunVJcxxby0U42CXQ0p2fx"
             onChange={(token) => setRecaptchaToken(token)}
+            className="transform scale-90 md:scale-100"
           />
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-6">
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="px-8 py-2"
+            className="w-full md:w-auto px-6 md:px-8 py-2 bg-[#8e2024] hover:bg-[#8e2024]/90 text-white"
           >
             {isSubmitting ? "Envoi en cours..." : "Envoyer"}
           </Button>

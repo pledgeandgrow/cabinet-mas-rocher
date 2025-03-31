@@ -12,7 +12,7 @@ const BannerInformative: React.FC<BannerInformativeProps> = ({ type }) => {
         <div className="w-full flex flex-col justify-center items-center text-center py-12 px-6 md:px-12 lg:px-24">
             {type === "gestion-locative" ? (
                 <>
-                    <Badge>Gestion Locative</Badge>
+                    <Badge className="bg-[#8e2024] hover:bg-[#8e2024]/90 text-white">Gestion Locative</Badge>
                     <h1 className="text-5xl font-bold my-8">Vous êtes propriétaire</h1>
                     <p className="w-1/2 text-zinc-800 dark:text-zinc-200 my-4">
                         Vous recherchez un Administrateur de Biens compétent, disponible, accessible et humain pour gérer vos biens immobiliers. 

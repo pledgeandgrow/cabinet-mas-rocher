@@ -8,7 +8,7 @@ export default function ServicesComponent() {
   return (
     <section className="py-12 bg-gray-50">
       <div className="text-center mb-8">
-        <Badge className="text-sm px-4 py-2 bg-blue-100 text-blue-800 font-semibold animate-pulse">
+        <Badge className="text-sm px-4 py-2 bg-[#8e2024]/10 text-[#8e2024] font-semibold animate-pulse">
           CONTACTEZ-NOUS
         </Badge>
         <h2 className="text-3xl font-extrabold text-blue-800 mt-4">
@@ -55,7 +55,7 @@ export default function ServicesComponent() {
         />
 
         <Progress value={30} className="col-span-2 mx-auto w-full" />
-        <Button className="bg-blue-800 text-white col-span-2 w-40 mx-auto py-2 rounded-lg hover:bg-orange-400">
+        <Button className="bg-[#8e2024] hover:bg-[#8e2024]/90 text-white col-span-2 w-40 mx-auto py-2 rounded-lg">
           Envoyer
         </Button>
       </form>

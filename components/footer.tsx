@@ -26,7 +26,7 @@ const navigation = [
   { name: 'Contact', href: '/contact', icon: MessageSquare },
   { name: 'Mentions Légales', href: '/mentions-legales', icon: FileText },
   { name: 'Politique de traitement RGPD', href: 'https://www.declarations-juridiques.fr/processing-policy/cabinet-r-michou-et-cie_562016535', icon: Shield },
-  { name: 'Espace client', href: '/espace-client', icon: UserCircle },
+  { name: 'Espace client', href: 'https://michou.neotimm.com/extranet/#/login', icon: UserCircle, external: true },
 ]
 
 const contact = [
@@ -52,6 +52,8 @@ export default function Footer() {
                   key={item.name}
                   href={item.href}
                   className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
+                  target={item.external ? '_blank' : '_self'}
+                  rel={item.external ? 'noopener noreferrer' : ''}
                 >
                   <item.icon className="w-4 h-4" />
                   <span>{item.name}</span>
@@ -79,7 +81,7 @@ export default function Footer() {
                 className="h-auto p-0 text-muted-foreground hover:text-primary"
                 asChild
               >
-                <a href="mailto:cabinet@cabinet-michou.com" className="flex items-center space-x-2">
+                <a href="mailto:cabinet@cabinet-mas-rocher.com" className="flex items-center space-x-2">
                   <Mail className="w-5 h-5" />
                   <span>cabinet@cabinet-mas-rocher.com</span>
                 </a>

@@ -11,7 +11,7 @@ interface NewsItem {
 
 export default function NewsManagement() {
   const newsItems: NewsItem[] = [
-    { id: 1, title: "Un nouveau site Internet pour le cabinet Michou", hasLink: false, isPublished: false },
+    { id: 1, title: "Un nouveau site Internet pour le cabinet Mas Rocher", hasLink: false, isPublished: false },
     { id: 2, title: "On parle de nous sur Intratone", hasLink: true, isPublished: true },
     { id: 3, title: "Retrouvez-nous sur Instagram", hasLink: true, isPublished: true },
     { id: 4, title: "TVA et biens immobiliers", hasLink: false, isPublished: false },
@@ -59,14 +59,14 @@ export default function NewsManagement() {
                 <button className="text-blue-600 hover:text-blue-800">
                   <Pencil className="h-4 w-4" />
                 </button>
-                <button className="text-red-600 hover:text-red-800">
+                <button className="text-[#8e2024] hover:text-[#8e2024]/80">
                   <X className="h-4 w-4" />
                 </button>
               </TableCell>
               <TableCell>{item.title}</TableCell>
               <TableCell>{item.hasLink ? "Oui" : "Non"}</TableCell>
               <TableCell>
-                <div className={`h-3 w-3 rounded-full ${item.isPublished ? "bg-green-500" : "bg-red-500"}`} />
+                <div className={`h-3 w-3 rounded-full ${item.isPublished ? "bg-green-500" : "bg-[#8e2024]"}`} />
               </TableCell>
             </TableRow>
           ))}
@@ -75,4 +75,3 @@ export default function NewsManagement() {
     </div>
   )
 }
-

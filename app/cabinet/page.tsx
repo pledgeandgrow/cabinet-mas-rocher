@@ -11,14 +11,14 @@ function CabinetPage() {
        <section className="py-12 px-6 md:px-12 lg:px-24">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <Badge className="mb-4">Cabinet Michou
+                    <Badge className="mb-4 bg-[#8e2024] hover:bg-[#8e2024]/90 text-white">Cabinet Mas Rocher
                     </Badge>
-                    <h1 className="text-5xl font-bold mb-4">
-                    Cabinet Michou
+                    <h1 className="text-4xl font-bold mb-4">
+                    Cabinet Mas Rocher
 
                     </h1>
-                    <p className="text-lg text-gray-500 mb-4">
-                    Spécialiste de l'administration d'immeubles et de biens immobiliers, Cabinet Michou accompagne propriétaires et copropriétaires dans la gestion locative, le syndic de copropriété et les transactions immobilières. Grâce à une expertise pointue et un suivi rigoureux, nous assurons une gestion transparente et optimisée pour valoriser votre patrimoine et garantir votre sérénité.
+                    <p className="text-lg text-gray-600 mb-8">
+                    Spécialiste de l'administration d'immeubles et de biens immobiliers, Cabinet Mas Rocher accompagne propriétaires et copropriétaires dans la gestion locative, le syndic de copropriété et les transactions immobilières. Grâce à une expertise pointue et un suivi rigoureux, nous assurons une gestion transparente et optimisée pour valoriser votre patrimoine et garantir votre sérénité.
 
                     </p>
                     
@@ -44,7 +44,7 @@ function CabinetPage() {
                     className="rounded-lg shadow-lg"
                 />
                 <div>
-                    <Badge className="mb-4">Cabinet Mas Rocher
+                    <Badge className="mb-4 bg-[#8e2024] hover:bg-[#8e2024]/90 text-white">Cabinet Mas Rocher
                     </Badge>
                     <h1 className="text-5xl font-bold mb-4">
                      Cabinet Mas Rocher

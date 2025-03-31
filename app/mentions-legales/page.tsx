@@ -3,8 +3,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 
 export const metadata: Metadata = {
-  title: "Mentions Légales | Cabinet R. Michou & Cie",
-  description: "Mentions légales du Cabinet R. Michou & Cie - Informations sur l'éditeur, l'hébergeur et les conditions d'utilisation du site.",
+  title: "Mentions Légales | Cabinet Mas Rocher",
+  description: "Mentions légales du Cabinet Mas Rocher - Informations sur l'éditeur, l'hébergeur et les conditions d'utilisation du site.",
 }
 
 export default function MentionsLegales() {
@@ -104,9 +104,9 @@ export default function MentionsLegales() {
               </p>
               <Separator className="my-4" />
               <p>
-                La SAS Cabinet Mas Rocher et Cie rappelle aux internautes les caractéristiques et les limites du réseau internet 
+                La SAS Cabinet Mas Rocher rappelle aux internautes les caractéristiques et les limites du réseau internet 
                 et décline toute responsabilité liée aux conséquences de leur connexion à ce réseau via le site cabinet-michou.com. 
-                Plus particulièrement, la SAS Cabinet R. MICHOU et Cie ne saurait être tenue responsable de tout dommage, matériel 
+                Plus particulièrement, la SAS Cabinet Mas Rocher ne saurait être tenue responsable de tout dommage, matériel 
                 ou immatériel causé aux internautes, à leurs équipements informatiques et aux données qui y sont stockées, et aux 
                 conséquences pouvant en découler sur leur activité personnelle, professionnelle ou commerciale.
               </p>

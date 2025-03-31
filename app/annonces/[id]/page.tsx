@@ -34,9 +34,9 @@ const DPE_COLORS: { [key: string]: string } = {
   B: "bg-lime-500",
   C: "bg-yellow-500",
   D: "bg-orange-500",
-  E: "bg-red-500",
-  F: "bg-red-700",
-  G: "bg-red-900",
+  E: "bg-[#8e2024]/80",
+  F: "bg-[#8e2024]/90",
+  G: "bg-[#8e2024]",
 };
 
 interface Photo {
@@ -113,7 +113,7 @@ export default async function AnnoncePage({ params }: { params: { id: string } }
         {/* Informations principales */}
         <div className="space-y-6">
           <div>
-            <Badge className="mb-4">{isLocation ? "Location" : "Vente"}</Badge>
+            <Badge className="mb-4 bg-[#8e2024] hover:bg-[#8e2024]/90 text-white">{isLocation ? "Location" : "Vente"}</Badge>
             <h1 className="text-3xl font-bold mb-2">{annonce.nom}</h1>
             <p className="text-muted-foreground flex items-center gap-2">
               <MapPin className="h-4 w-4" />

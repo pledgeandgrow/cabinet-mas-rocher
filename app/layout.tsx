@@ -17,8 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Cabinet R. Michou & Cie",
-  description: "Cabinet R. Michou & Cie - Gestion locative, Syndic, Vente immobilière à Paris",
+  title: "Cabinet Mas Rocher",
+  description: "Cabinet Mas Rocher - Gestion locative, Syndic, Vente immobilière à Paris",
 };
 
 export default function RootLayout({

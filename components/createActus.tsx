@@ -116,10 +116,10 @@ function CreateActusPopup() {
           </Select>
         </div>
 
-        {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+        {errorMessage && <p className="text-[#8e2024]">{errorMessage}</p>}
 
         <div className="flex justify-center">
-          <Button type="submit" className="px-8 py-2" disabled={loading}>
+          <Button type="submit" className="px-8 py-2 bg-[#8e2024] hover:bg-[#8e2024]/90 text-white" disabled={loading}>
             {loading ? "Envoi..." : "Envoyer"}
           </Button>
         </div>

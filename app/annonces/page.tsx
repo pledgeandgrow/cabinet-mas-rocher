@@ -36,9 +36,9 @@ const DPE_COLORS: { [key: string]: string } = {
   B: "bg-lime-500",
   C: "bg-yellow-500",
   D: "bg-orange-500",
-  E: "bg-red-500",
-  F: "bg-red-700",
-  G: "bg-red-900",
+  E: "bg-[#8e2024]/80",
+  F: "bg-[#8e2024]/90",
+  G: "bg-[#8e2024]",
 };
 
 export default function AnnoncesPage() {
@@ -279,7 +279,7 @@ export default function AnnoncesPage() {
                       <Building2 className="h-12 w-12 text-gray-400" />
                     </div>
                   )}
-                  <Badge className="absolute top-4 bg-[#00408A] hover:bg-white hover:text-[#F6A831] dark:bg-background/90 left-4  backdrop-blur-sm">
+                  <Badge className="absolute top-4 bg-[#8e2024] hover:bg-[#8e2024]/90 text-white dark:bg-background/90 left-4 backdrop-blur-sm">
                     {annonce.transaction}
                   </Badge>
                   {annonce.dpe_conso && (

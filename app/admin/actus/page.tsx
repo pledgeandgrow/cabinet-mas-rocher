@@ -125,7 +125,7 @@ export default function NewsManagement() {
       {isLoading ? (
         <p>Chargement des actualités...</p>
       ) : error ? (
-        <p className="text-red-500">{error}</p>
+        <p className="text-[#8e2024]">{error}</p>
       ) : (
         <Table>
           <TableHeader>
@@ -147,7 +147,7 @@ export default function NewsManagement() {
                     <Pencil className="h-4 w-4" />
                   </button>
                   <button
-    className="text-red-600 hover:text-red-800"
+    className="text-[#8e2024] hover:text-[#8e2024]/80"
     onClick={() => handleDelete(item.id)}
   >
     <X className="h-4 w-4" />
@@ -156,7 +156,7 @@ export default function NewsManagement() {
                 <TableCell>{item.titre}</TableCell>
                 <TableCell>{item.lien ? "Oui" : "Non"}</TableCell>
                 <TableCell>
-                  <div className={`h-3 w-3 rounded-full ${item.publie ? "bg-green-500" : "bg-red-500"}`} />
+                  <div className={`h-3 w-3 rounded-full ${item.publie ? "bg-green-500" : "bg-[#8e2024]"}`} />
                 </TableCell>
               </TableRow>
             ))}
