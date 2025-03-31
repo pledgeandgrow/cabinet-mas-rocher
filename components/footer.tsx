@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { Separator } from "@/components/ui/separator"
@@ -17,6 +19,7 @@ import {
   UserCircle
 } from "lucide-react"
 import Map from './Map'
+import { useTheme } from "next-themes"
 
 const navigation = [
   { name: 'Accueil', href: '/', icon: Home },
@@ -37,11 +40,14 @@ const contact = [
 ]
 
 export default function Footer() {
+  const { resolvedTheme } = useTheme()
+  const logoSrc = resolvedTheme === 'dark' ? '/logo-mas-rocher-white.png' : '/logo-mas-rocher-dark.png'
+
   return (
     <div>
       <Map/>
       <footer className="border-t bg-background">
-      <div className="container px-4 py-12 mx-auto">
+      <div className="container px-4 py-8 mx-auto">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Navigation Links */}
           <div className="space-y-4">
@@ -141,10 +147,19 @@ export default function Footer() {
           </div>
         </div>
 
-        <Separator className="my-8" />
+        <Separator className="my-4" />
 
-        <div className="text-center text-sm text-muted-foreground">
-          {new Date().getFullYear()} Cabinet Mas Rocher. Tous droits réservés.
+        <div className="flex flex-col items-center space-y-2">
+          <Image 
+            src={logoSrc}
+            alt="Cabinet Mas Rocher"
+            width={120}
+            height={40}
+            className="mb-0"
+          />
+          <div className="text-center text-sm text-muted-foreground pb-2">
+            {new Date().getFullYear()} Cabinet Mas Rocher. Tous droits réservés.
+          </div>
         </div>
       </div>
     </footer>

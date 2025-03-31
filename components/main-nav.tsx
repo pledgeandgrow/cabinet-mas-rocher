@@ -14,7 +14,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
-import logo from "../public/logo.svg"
+import { useTheme } from "next-themes"
 import { Home, Search, Building2, Building, Phone, FileText, ExternalLink, Key, Users, Banknote } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useState } from "react"
@@ -126,6 +126,9 @@ const ListItem = ({ className, title, children, ...props }: any) => {
 
 export function MainNav() {
   const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const { resolvedTheme } = useTheme()
+  const logoSrc = resolvedTheme === 'dark' ? '/logo-mas-rocher-white.png' : '/logo-mas-rocher-dark.png'
+  
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
@@ -133,9 +136,9 @@ export function MainNav() {
           <div className="flex items-center gap-10">
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                className="ml-8"
-                src={logo || "/placeholder.svg"}
-                alt="Cabinet Michou"
+                className="ml-0"
+                src={logoSrc}
+                alt="Cabinet Mas Rocher"
                 width={120}
                 height={40}
                 priority
@@ -225,8 +228,8 @@ export function MainNav() {
             </SheetTrigger>
             <SheetContent side="left" className="w-[300px] sm:w-[400px]">
               <SheetHeader>
-                <SheetTitle>
-                  <Image src={logo || "/placeholder.svg"} alt="Cabinet Michou" width={120} height={40} />
+                <SheetTitle className="flex justify-start">
+                  <Image src={logoSrc} alt="Cabinet Mas Rocher" width={120} height={40} className="ml-0" />
                 </SheetTitle>
               </SheetHeader>
               <div className="flex flex-col gap-4 py-4">
@@ -277,7 +280,11 @@ export function MainNav() {
                       <Link
                         key={link.title}
                         href={link.url}
-                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
+                        className={`flex items-center gap-2 text-sm ${
+                          link.title === "Extranet Client" 
+                            ? "bg-[#b69260] hover:bg-[#b69260]/90 text-white p-2 rounded-md" 
+                            : "text-muted-foreground hover:text-primary"
+                        }`}
                       >
                         <link.icon className="h-4 w-4" />
                         {link.title}

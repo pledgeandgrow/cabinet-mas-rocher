@@ -19,6 +19,27 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Cabinet Mas Rocher",
   description: "Cabinet Mas Rocher - Gestion locative, Syndic, Vente immobilière à Paris",
+  icons: {
+    icon: [
+      {
+        url: '/logo-mas-rocher-dark.png',
+        media: '(prefers-color-scheme: light)',
+        type: 'image/png',
+      },
+      {
+        url: '/logo-mas-rocher-white.png',
+        media: '(prefers-color-scheme: dark)',
+        type: 'image/png',
+      },
+    ],
+    shortcut: ['/logo-mas-rocher-dark.png'],
+    apple: [
+      {
+        url: '/logo-mas-rocher-dark.png',
+        type: 'image/png',
+      }
+    ],
+  },
 };
 
 export default function RootLayout({
